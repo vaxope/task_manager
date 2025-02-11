@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/stan/development/taskManager/taskmanager/lib/screens",
+      "program": "/Users/stan/development/taskManager/taskmanager/lib/screens/build/Debug/outDebug"
+    }
+  ]
+}
