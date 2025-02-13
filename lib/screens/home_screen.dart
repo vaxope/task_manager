@@ -36,15 +36,14 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: Colors.white,
       appBar: _buildAppBar(),
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Column(
           children: [
-            searchBox(),
             Expanded(
               child: ListView(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(top: 50, bottom: 20),
+                    margin: EdgeInsets.only(top: 10, bottom: 20),
                     child: Text(
                       'Today\'s Tasks',
                       style: TextStyle(
@@ -78,42 +77,21 @@ class _HomeScreenState extends State<HomeScreen> {
 AppBar _buildAppBar() {
   return AppBar(
     backgroundColor: Colors.white,
-    title: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Icon(
-          Icons.menu,
-          color: Colors.black,
-          size: 40,
-        ),
-        CircleAvatar(
-          radius: 20,
-          backgroundImage: AssetImage("assets/images/defaultpfp.jpg"),
-        )
-      ],
-    ),
-  );
-}
-
-Widget searchBox() {
-  return Container(
-    padding: EdgeInsets.symmetric(horizontal: 15),
-    decoration: BoxDecoration(
-      color: Colors.black,
-      borderRadius: BorderRadius.circular(20),
-    ),
-    child: TextField(
-      decoration: InputDecoration(
-        contentPadding: EdgeInsets.all(0),
-        prefixIcon: Icon(
-          Icons.search,
-          color: Colors.white,
-          size: 20,
-        ),
-        prefixIconConstraints: BoxConstraints(maxHeight: 20, minWidth: 25),
-        border: InputBorder.none,
-        hintText: 'Search',
-        hintStyle: TextStyle(color: Colors.white, fontSize: 20),
+    title: Padding(
+      padding: const EdgeInsets.only(top: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Icon(
+            Icons.menu,
+            color: Colors.black,
+            size: 40,
+          ),
+          CircleAvatar(
+            radius: 20,
+            backgroundImage: AssetImage("assets/images/defaultpfp.jpg"),
+          )
+        ],
       ),
     ),
   );
